@@ -9,7 +9,7 @@
         <link rel="icon" href="./images/Иконка обрезанная.svg">
         <title>EasyStroy</title>
     </head>
-    <body>
+    <body class="body">
         <header class="header">
             <div class="container">
                 <div class="header__content">
@@ -19,13 +19,17 @@
                     </a>
                     <div class="header__contact contact">
                         <div class="contact__person">
-                            <a href="mailto:example@gmail.com"
-                                class="contact__type">
-                                <svg class="contact__icon">
-                                    <use xlink:href="./svg/sprite.svg#message"></use>
-                                </svg>
-                                <span class="contact__text">example@gmail.com</span>
-                            </a>
+                            <div class="mode">
+                                <input class="checkbox" id="checkbox1" type="checkbox"/>
+                                <label for="checkbox1" class="checkbox-label">
+                                    <svg class="off">
+                                        <use xlink:href="./svg/sprite.svg#sun"></use>
+                                    </svg>
+                                    <svg class="on">
+                                        <use xlink:href="./svg/sprite.svg#moon"></use>
+                                    </svg> 
+                                </label>
+                            </div>
                             <a href="tel:+998998194819" class="contact__type">
                                 <svg class="contact__icon">
                                     <use xlink:href="./svg/sprite.svg#phone"></use>
@@ -60,27 +64,129 @@
             </div>
         </header>
         <main class="main">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img
-                            src="./images/IMG_3959.jpg"
-                            />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://swiperjs.com/demos/images/nature-2.jpg"
-                            />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://swiperjs.com/demos/images/nature-3.jpg"
-                            />
+            <div
+            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+            class="swiper mySwiper2"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="swiper__img "  src="./images/1щ. На главную.webp" />
+                <p class="chapter">
+                    Электрика
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__img" src="./images/plumbing.jpg" />
+                <p class="chapter">
+                    Сантехника
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__img" src="./images/plain-ceiling.jpg" />
+                <p class="chapter">
+                    Гипсокартон
+                </p>
+              </div> 
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div   class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="./images/1м. На главную.webp" alt="" class="card__img">
+                                <a href="#!" class="card__content">
+                                    <span class="card__text">Электромонтаж с нуля</span>
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="./images/demontazh-peregorodok-iz-gkl.jpg" alt="" class="card__img">
+                                <a href="#!" class="card__content">
+                                    <span class="card__text"> Демонтаж + монтаж</span>  
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="./images/D092D0BDD183D182D180.jpg" alt="" class="card__img">
+                                <a href="#!" class="card__content">
+                                    <span class="card__text"> Установка электроустановок</span>  
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="./images/4-По-значениям-можно-искать-неисправности.jpg" alt="" class="card__img">
+                                <a href="#!" class="card__content">
+                                    <span class="card__text"> Установка и сборка электролитов напряжением до 1000В</span>  
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="./images/л1. На главную.webp" alt="" class="card__img">
+                                <a href="#!" class="card__content">
+                                    <span class="card__text"> Монтаж люстр и светильников</span>  
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="./images/1б. На главную.webp" alt="" class="card__img">
+                                <a href="#!" class="card__content">
+                                    <span class="card__text"> Монтаж Бра</span>  
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="./images/кухня.jfif" alt="" class="card__img">
+                                <a href="#!" class="card__content">
+                                    <span class="card__text">Монтаж подсветки кухонной мебели</span>  
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="./images/1пм. На главную.webp" alt="" class="card__img">
+                                <a href="#!" class="card__content">
+                                    <span class="card__text"> Монтаж подсветки шкафов</span>  
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="./images/з1. На главную.webp" alt="" class="card__img">
+                                <a href="#!" class="card__content">
+                                    <span class="card__text">Монтаж заземлительного контура с замерами</span>  
+                                </a>
+                            </div> 
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>  
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                    <p class="no__content">
+                        Здесь пока ничего нет
+                    </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                    <p class="no__content">
+                        Здесь пока ничего нет
+                    </p>
+                </div>
+              </div> 
             </div>
+          </div>
             
 
         </main>
