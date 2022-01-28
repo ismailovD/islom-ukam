@@ -20,19 +20,8 @@ const swiper2 = new Swiper(".mySwiper2", {
     },
 });
 
-const toggleMode = document.querySelector('#checkbox1'),
-      body = document.querySelector('.body'),
-      logo = document.querySelector('.logo__img'),
-      cards = document.querySelectorAll('.card');
-toggleMode.addEventListener('click', () => {
-  if(toggleMode.checked){
-    body.classList.add('night-mode');
-    logo.setAttribute('src', './images/logoW.png')
-  }else  {
-    body.classList.remove('night-mode');
-    logo.setAttribute('src', './images/logoB.png')
-  }
-})
+const cards = document.querySelectorAll('.card');
+ 
 
 cards.forEach(item => {
     let itemWidth = item.clientWidth;
