@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="./styles/grid.css">
         <link rel="stylesheet" href="./styles/style.css">
         <link rel="icon" href="./images/Иконка обрезанная.svg">
         <title>EasyStroy</title>
@@ -14,41 +15,65 @@
             <div class="container">
                 <div class="header__content">
                     <a href="#!" class="logo">
-                        <img src="./images/logoW.png" alt=""
+                        <img src="./images/logoW.png" alt="logo"
                             class="logo__img">
                     </a>
                     <div class="header__contact contact">
                         <div class="contact__person">
-                            
+                            <div class="burger-menu__btn">
+                                <span class="burger-menu__icon">
+                                    <span class="burger-menu__line"></span>
+                                </span>
+                            </div>
                             <a href="tel:+998998194819" class="contact__type">
                                 <svg class="contact__icon">
                                     <use xlink:href="./svg/sprite.svg#phone"></use>
                                 </svg>
                                 <span class="contact__text">+998 99 819 4 819</span>
                             </a>
-                        </div>
-                        <!-- <div class="contact__social">
-                    <a href="https://www.instagram.com/"
-                        class="contact__social-link">
-                        <svg class="contact__social-icon">
-                            <use
-                                xlink:href="./svg/sprite.svg#insta"></use>
-                        </svg>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="menu__small-screen">
+                <div class="menu__logo">
+                    <a href="" class="logo">
+                        <img src="./images/logoW.png" alt="logo" class="logo__img">
                     </a>
-                    <a href="https://twitter.com/"
-                        class="contact__social-link">
-                        <svg class="contact__social-icon">
-                            <use
-                                xlink:href="./svg/sprite.svg#twitter"></use>
+                    <span class="burger-menu__close">
+                        <svg class="burger-menu__close-icon">
+                            <use xlink:href="../svg/sprite.svg#close"></use>
                         </svg>
-                    </a>
-                    <a href="https://www.facebook.com/"
-                        class="contact__social-link">
-                        <svg class="contact__social-icon">
-                            <use xlink:href="./svg/sprite.svg#fb"></use>
-                        </svg>
-                    </a>
-                </div> -->
+                    </span>
+                </div>  
+                <a href="tel:+998998194819" class="contact__type">
+                    <svg class="contact__icon">
+                        <use xlink:href="./svg/sprite.svg#phone"></use>
+                    </svg>
+                    <span class="contact__text">+998 99 819 4 819</span>
+                </a>
+                <span class="menu__text">Be with us</span>
+                <div class="header__contact contact"> 
+                    <div class="contact__social">
+                        <a href="https://www.instagram.com/"
+                            class="contact__social-link">
+                            <svg class="contact__social-icon">
+                                <use
+                                    xlink:href="../svg/sprite.svg#insta"></use>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/"
+                            class="contact__social-link">
+                            <svg class="contact__social-icon">
+                                <use xlink:href="../svg/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/"
+                            class="contact__social-link">
+                            <svg class="contact__social-icon">
+                                <use xlink:href="../svg/sprite.svg#fb"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -87,7 +112,7 @@
                 <div class="container">
                     <h1 class="title">Наши услуги</h1>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Электромонтажные работы/1м. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -95,7 +120,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Подсветка в потолке/1пп. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -103,7 +128,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Светильники/1с. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -111,7 +136,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Подсветка ступенек лестницы/1пл. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -119,7 +144,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Люстры/л1. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -127,7 +152,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Бра и зеркала/1б. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -135,7 +160,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Подсветка в мебели/1пм. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -143,7 +168,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Работы с камнем/1Рк. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -151,7 +176,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Заземление/з1. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -159,7 +184,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Силовой ввод в дом/1сл. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -167,7 +192,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Штробы/1ш. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -175,7 +200,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Электрический теплый пол/1т. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
@@ -183,7 +208,7 @@
                                 </a>
                             </div> 
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-6 col-xl-4">
                             <div class="card">
                                 <img src="./images/Электрощит/1Щ. На главную.webp" alt="" class="card__img">
                                 <a href="#!" class="card__content">
