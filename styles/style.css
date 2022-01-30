@@ -100,8 +100,8 @@ body.hidden {
 .contact__type{
     display: flex; 
     align-items: center;
-    padding: 9px 20px;
-    border-right: 1px solid var(--dark-grey-opacity-15);
+    padding: 9px 20px; 
+    margin-right: -15px;
 }  
  
  
@@ -124,8 +124,11 @@ body.hidden {
 .contact__icon {
     margin-right: 12px;
 }
-.contact__type:hover {
-    box-shadow:inset  0 0 15px 0 var(--green); 
+.contact__person .contact__type:hover {
+    box-shadow:  0 0 15px 0 var(--green); 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 .contact__social-link {
     display: flex;
@@ -266,7 +269,7 @@ body.hidden {
     margin-bottom: 30px;
 }
 .menu__small-screen .contact__type:hover{
-   background: transparent;
+   background: transparent; 
 }
 .menu__small-screen .contact__type:hover .contact__icon{
    transform: scale(1);
@@ -337,10 +340,12 @@ body.hidden {
     filter: brightness(30%);
     transition: filter 1s; 
     overflow: hidden;
-    border: 2px solid var(--white);
+    border-radius: 10px;
+    
 }
 
 .mySwiper2 .swiper-slide-active {
+    border: 2px double var(--green);
     filter: brightness(100%);
 }
 
@@ -521,7 +526,69 @@ body.hidden {
     fill: var(--yellow-2);
 }
  
-
+.fixed__social {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.fixed__social-link {
+    position: absolute;
+    transition: 0.5s;
+    top: 0;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    transform: translateX(-50%);
+    opacity: 0; 
+    padding-bottom: 20px;
+}
+.fixed__social-link:last-child {
+    padding: 0;
+}
+.fixed__social-icon {
+    width: 40px;
+    height: 40px; 
+}
+.fixed__social .fill-icon {
+    fill: #8ff739;
+}
+ .youtube {
+     width: 60px;
+     height: 60px;
+     padding: 0;
+ }
+.fixed__social-img {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.fixed__social:hover .fixed__social-link:nth-child(2){
+    opacity: 1;
+    top: -150%;
+}
+.fixed__social:hover .fixed__social-link:nth-child(3){
+    opacity: 1;
+    top: -275%;
+}
+.fixed__social:hover .fixed__social-link:nth-child(4){
+    opacity: 1;
+    top: -375%;
+}
+.fixed__social:hover .fixed__social-link:nth-child(5){
+    opacity: 1;
+    top: -475%;
+}
+.fixed__social:hover .fixed__social-link:nth-child(6){
+    opacity: 1;
+    top: -600%;
+}
 @media (max-width: 991px) {
      .burger-menu__btn {
         display: flex;

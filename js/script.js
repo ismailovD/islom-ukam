@@ -2,8 +2,8 @@ const swiper = new Swiper(".mySwiper", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 1,  
-    watchSlidesProgress: true, 
-    
+    watchSlidesProgress: true,
+    allowTouchMove:false
   });
  
 const swiper2 = new Swiper(".mySwiper2", {
@@ -11,6 +11,7 @@ const swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: "auto", 
     spaceBetween: 10, 
     centeredSlides: true,
+    watchSlidesProgress: true,
     thumbs: {
       swiper: swiper,
     },
@@ -26,7 +27,6 @@ const cards = document.querySelectorAll('.card'),
       burgerMenu = document.querySelector('.menu__small-screen'),
       body = document.querySelector('.body');
  
-
 cards.forEach(item => {
     let itemWidth = item.clientWidth;
     item.style.height = itemWidth + 'px';
