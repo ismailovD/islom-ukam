@@ -26,7 +26,17 @@ const cards = document.querySelectorAll('.card'),
       burgerClose = document.querySelector('.burger-menu__close'),
       burgerMenu = document.querySelector('.menu__small-screen'),
       body = document.querySelector('.body'),
-      socialBtn = document.querySelector('.fixed__social');
+      socialBtn = document.querySelector('.fixed__social'),
+      loading = document.querySelector('.loading');
+
+
+window.addEventListener('load', () => {
+  loading.classList.add('small');
+  setTimeout(() => {
+  loading.classList.add('hide')
+}, 300)
+}) 
+
  
 cards.forEach(item => {
     let itemWidth = item.clientWidth;
