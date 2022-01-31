@@ -71,9 +71,7 @@ li {
 body.hidden {
     overflow: hidden;
 }
-.body__content {
-    display: none;
-}
+ 
 .header {
     position: fixed;
     top: 0;
