@@ -25,7 +25,8 @@ const cards = document.querySelectorAll('.card'),
       burgerBtn = document.querySelector('.burger-menu__btn '),
       burgerClose = document.querySelector('.burger-menu__close'),
       burgerMenu = document.querySelector('.menu__small-screen'),
-      body = document.querySelector('.body');
+      body = document.querySelector('.body'),
+      socialBtn = document.querySelector('.fixed__social');
  
 cards.forEach(item => {
     let itemWidth = item.clientWidth;
@@ -39,6 +40,9 @@ window.addEventListener('resize', () => {
 })
 })
 
+socialBtn.addEventListener('click', () => {
+  socialBtn.classList.toggle('pushed')
+})
 
 
 burgerBtn.addEventListener('click', (e) => {
@@ -57,3 +61,11 @@ burgerMenu.classList.remove('show');
 body.classList.remove('hidden');
 }
 })
+
+burgerMenu.addEventListener('click', (e) => {  
+  if(e.clientX > burgerMenu.clientWidth){
+    burgerMenu.classList.remove('show');
+    body.classList.remove('hidden');
+  }
+})
+ 
