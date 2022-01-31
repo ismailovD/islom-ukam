@@ -30,11 +30,13 @@ const cards = document.querySelectorAll('.card'),
       loading = document.querySelector('.loading');
 
 
-window.addEventListener('load', () => {
-  loading.classList.add('small');
+window.addEventListener('load', () => { 
+  setTimeout(() => {
+    loading.classList.add('small');
+}, 3000)
   setTimeout(() => {
   loading.classList.add('hide'); 
-}, 300)
+}, 3300)
 }) 
 
  
