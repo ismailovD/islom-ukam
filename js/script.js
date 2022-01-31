@@ -33,7 +33,7 @@ const cards = document.querySelectorAll('.card'),
 window.addEventListener('load', () => {
   loading.classList.add('small');
   setTimeout(() => {
-  loading.classList.add('hide')
+  loading.classList.add('hide'); 
 }, 300)
 }) 
 
