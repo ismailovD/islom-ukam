@@ -22,14 +22,12 @@ const swiper2 = new Swiper(".mySwiper2", {
 });
 
 const cards = document.querySelectorAll('.card'),
-      burgerBtn = document.querySelector('.burger-menu__btn '),
-      burgerClose = document.querySelector('.burger-menu__close'),
+      burgerBtn = document.querySelector('.burger-menu__btn '), 
       burgerMenu = document.querySelector('.menu__small-screen'),
       body = document.querySelector('.body'),
-      socialBtn = document.querySelector('.fixed__social'),
+      socialBtn = document.querySelector('.fixed__social-surface'),
       loading = document.querySelector('.loading');
-
-
+ 
 window.addEventListener('load', () => { 
   setTimeout(() => {
     loading.classList.add('small');
@@ -52,21 +50,22 @@ window.addEventListener('resize', () => {
 })
 })
 
-socialBtn.addEventListener('click', () => {
-  socialBtn.classList.toggle('pushed')
+socialBtn.addEventListener('click', () => { 
+  socialBtn.parentElement.classList.toggle('pushed')
 })
 
 
 burgerBtn.addEventListener('click', (e) => {
 e.preventDefault(); 
-burgerMenu.classList.add('show');
-body.classList.add('hidden')
+  burgerBtn.classList.toggle('change');
+  burgerMenu.classList.toggle('show');
+  body.classList.toggle('hidden')
 })
-burgerClose.addEventListener('click', (e) => {
-e.preventDefault(); 
-burgerMenu.classList.remove('show');
-body.classList.remove('hidden');
-})
+// burgerClose.addEventListener('click', (e) => {
+// e.preventDefault(); 
+// burgerMenu.classList.remove('show');
+// body.classList.remove('hidden');
+// })
 window.addEventListener('resize', () => {
 if(window.innerWidth > 991){
 burgerMenu.classList.remove('show');
@@ -78,6 +77,7 @@ burgerMenu.addEventListener('click', (e) => {
   if(e.clientX > burgerMenu.clientWidth){
     burgerMenu.classList.remove('show');
     body.classList.remove('hidden');
+    burgerBtn.classList.remove('change');
   }
 })
  

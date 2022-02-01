@@ -103,8 +103,71 @@ body.hidden {
     align-items: center;
     padding: 9px 20px; 
     margin-right: -15px;
+    position: relative;
+    overflow: hidden;  
 }  
- 
+.button__line{
+    position: absolute;
+    display: block;
+}
+.button__line--top{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(90deg, transparent,var(--green)) ;
+
+}
+.contact__type:hover .button__line--top{
+left: 100%;
+transition: 1s;
+transition-delay: 0.25s;
+}
+.button__line--bottom{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(270deg, transparent,var(--green)) ;
+
+}
+.contact__type:hover .button__line--bottom{
+right: 100%;
+transition: 1s;
+transition-delay: 0.25s;
+}
+.button__line--left{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background:linear-gradient(0deg, transparent,var(--green)) ;
+
+}
+.contact__type:hover .button__line--left{
+bottom:  100%;
+transition: 1s;
+transition-delay: 0s;
+}
+.button__line--right{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background:linear-gradient(180deg, transparent,var(--green)) ;
+
+}
+.contact__type:hover .button__line--right{
+top:  100%;
+transition: 1s;
+transition-delay: 0s;
+}
+.contact__type:hover{
+    box-shadow: 0 0 10px var(--green);
+    background: var(--green);
+    color: #333;
+    transition-delay:1s ;
+} 
  
 
 .contact__social {
@@ -125,11 +188,14 @@ body.hidden {
 .contact__icon {
     margin-right: 12px;
 }
-.contact__person .contact__type:hover {
-    box-shadow:  0 0 15px 0 var(--green); 
+.contact__person .contact__type:hover { 
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
+}
+
+.contact__person .contact__type:hover .contact__icon {
+    fill: var(--white);
 }
 .contact__social-link {
     display: flex;
@@ -142,7 +208,7 @@ body.hidden {
 .contact__social-link:hover  {
     background: var(--grey);
 }
-.contact__social-link[data-title="Tik Tok"]::after {
+.contact__social-link[data-title="Tik_Tok"]::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -181,43 +247,64 @@ body.hidden {
     justify-content: center;
     align-items: center;
     margin: auto;
+    position: relative;
+    z-index: 99;
 }
+ 
 .burger-menu__icon {
     width: 24px;
     height: 16px;
     cursor: pointer;
     position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger-menu__line,
+.burger-menu__line::after,
+.burger-menu__line::before {
     display: inline-block;
+    width: 100%;
+	height: 2px;
 }
 
 .burger-menu__line {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 2px;
-    border-radius: 5px;
-    background: var(--white);
-    display: inline-block; 
-    transition: opacity 0.2s;
+	position: relative; 
+	background: rgba(255, 255, 255, 1);
+	transition: all 0ms 300ms;  
 }
-.burger-menu__icon::after, .burger-menu__icon::before{
-    background-color: var(--white);
-    border-radius: 4px;
-    content: "";
-    height: 2px;
-    left: 0; 
-    position: absolute;
-    transform-origin: 50% 50% 0;
-    transition: width .2s,transform .2s;
-    width: 100%;
+.burger-menu__btn.change .burger-menu__line  {
+    background: rgba(255, 255, 255, 0);
 }
- .burger-menu__icon::after{ 
-    bottom: 0;
-    width: 70%; 
+.burger-menu__line::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 6px;
+	background: rgba(255, 255, 255, 1);
+	transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
- .burger-menu__icon::before{ 
-    top: 0;  
+
+.burger-menu__line::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 6px;
+	background: rgba(255, 255, 255, 1);
+	transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger-menu__btn.change .burger-menu__line::after {
+	top: 0;
+	transform: rotate(45deg);
+	transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.burger-menu__btn.change .burger-menu__line::before {
+	bottom: 0;
+	transform: rotate(-45deg);
+	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
 }
 .menu__small-screen {
     position: fixed;
@@ -330,7 +417,7 @@ body.hidden {
 .menu__text {
     font-family: var(--f700-gilroy);
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 27px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -342,8 +429,7 @@ body.hidden {
     width: 100%; 
     height: 100%;   
     object-fit: cover;
-    transition: .5s;
-    
+    transition: .5s; 
 }
 .mySwiper  {
     padding-top: 100px;
@@ -355,11 +441,10 @@ body.hidden {
     transition: filter 1s; 
     overflow: hidden;
     border-radius: 10px;
-    
+    position: relative;
 }
-
-.mySwiper2 .swiper-slide-active {
-    border: 2px double var(--green);
+ 
+.mySwiper2 .swiper-slide-active { 
     filter: brightness(100%);
 }
 
@@ -394,7 +479,7 @@ body.hidden {
     font-size: 35px;
     color: var(--white);
     background: rgba(0, 0, 0, 0.7);
-    bottom:  100px;
+    bottom:  30px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -408,14 +493,15 @@ body.hidden {
 }
 .card {
     position: relative;
-    height: 100%;
-    border: 2px solid var(--dark-grey);
+    height: 100%; 
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 30px;
-}
+    margin-bottom: 30px; 
+    border: 2px solid var(--nav-link);
+} 
+
 .card:hover{ 
-    border: 2px solid var(--light-blue); 
+    animation: infinite shadow_dance 10s; 
 }
 .card__img {
     width: 100%;
@@ -456,9 +542,9 @@ body.hidden {
      transform: translateY(50%); 
  }
  .card__content:hover .card__text{  
-     bottom: 10px;
-     transform: translateY(0); 
-    background: var(--nav-link-opacity-70); 
+    bottom: 10px;
+    transform: translateY(0); 
+    background: rgba(0, 0, 0, 0.7); 
 }
  .mode {
      display: flex;
@@ -545,10 +631,20 @@ body.hidden {
     right: 50px;
     bottom: 50px;
     z-index: 10;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    cursor: pointer; 
 }
+ 
+.fixed__social-surface { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
 .fixed__social-link {
     position: absolute;
     transition: 0.5s;
@@ -588,31 +684,35 @@ body.hidden {
      padding: 0;
  }
 .fixed__social-img {
-    position: absolute;
-    z-index: 5;
+    width: 100%;
+    height: 100%; 
+    position: absolute; 
+    z-index: -1;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
-}
-.fixed__social.pushed .fixed__social-link:nth-child(2){
-    opacity: 1;
-    top: -125%;
+    transform: translateX(-50%);  
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.37);
 }
 .fixed__social.pushed .fixed__social-link:nth-child(3){
     opacity: 1;
-    top: calc(-125% - 50px);
+    top: -75%;
 }
 .fixed__social.pushed .fixed__social-link:nth-child(4){
     opacity: 1;
-    top: calc(-125% - (50px  * 2));
+    top: calc(-75% - 50px);
 }
 .fixed__social.pushed .fixed__social-link:nth-child(5){
     opacity: 1;
-    top: calc(-125% - (50px  * 3));
+    top: calc(-75% - (50px  * 2));
 }
 .fixed__social.pushed .fixed__social-link:nth-child(6){
     opacity: 1;
-    top: calc(-125% - (50px  * 4));
+    top: calc(-75% - (50px  * 3));
+}
+.fixed__social.pushed .fixed__social-link:nth-child(7){
+    opacity: 1;
+    top: calc(-75% - (50px  * 4));
 }
 
 .loading {
@@ -680,14 +780,62 @@ body.hidden {
         transform:translate(-50%, -50%) scale(1);
     }
 }
+@keyframes shadow_dance {
+    from {
+        box-shadow: 0 0 5px 1px var(--green); 
+    }
+    10% {
+        box-shadow: 0 0 20px 1px var(--green); 
+    }
+    20% {
+        box-shadow: 0 0 10px 1px var(--green); 
+    }
+    30% {
+        box-shadow: 0 0 20px 1px var(--green); 
+    }
+    40% {
+        box-shadow: 0 0 10px 1px var(--green); 
+    }
+    50% {
+        box-shadow: 0 0 20px 1px var(--green); 
+    }
+    60% {
+        box-shadow: 0 0 10px 1px var(--green); 
+    }
+    70% {
+        box-shadow: 0 0 20px 1px var(--green); 
+    }
+    80% {
+        box-shadow: 0 0 10px 1px var(--green); 
+    }
+    90% {
+        box-shadow: 0 0 20px 1px var(--green); 
+    }
+    to {
+        box-shadow: 0 0 5px 1px var(--green); 
+    }
+}
 @media (max-width: 991px) {
      .burger-menu__btn {
         display: flex;
     }
-    .contact__type {
+    .contact__person .contact__type:hover {
+       background: transparent;
+       box-shadow: none;
+    }
+    .button__line--top,
+    .button__line--right,
+    .button__line--left,
+    .button__line--bottom {
         display: none;
     }
-    .menu__small-screen .contact__type {
+    .contact__person .contact__type:hover .contact__icon {
+        fill:  var(--green);
+    }
+    .contact__text {
+        display: none;
+    }
+    .menu__small-screen .contact__text {
         display: flex;
     }
 }
