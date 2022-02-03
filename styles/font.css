@@ -1,4 +1,16 @@
 @font-face {
+    font-family: "Manrope-Bold";
+    src: url(../fonts/Manrope/Manrope-Bold.ttf); 
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(../fonts/Manrope/Manrope-VariableFont_wght.ttf); 
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(../fonts/Manrope/Manrope-VariableFont_wght.ttf); 
+}
+@font-face {
     font-family: "Comfortaa-Bold";
     src: url(../fonts/Comfortaa/Comfortaa-Bold.woff);
     font-weight: 700;

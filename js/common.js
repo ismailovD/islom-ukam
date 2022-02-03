@@ -71,12 +71,16 @@ class Dropdown {
           btn.addEventListener('click', () => {  
             menu.classList.toggle('active'); 
               let list = menu.querySelector('.side-bar__dropdown-list'),
-                  listHeight = list.clientHeight;  
-                  menu.style.height = btnHeight + listHeight + 'px';
+                  listHeight = list.clientHeight;   
                 if(menu.classList.contains('active')){   
-                   
+                    menu.style.height = btnHeight + listHeight + 'px';
+                    setTimeout(() => {
+                        list.classList.add('active');
+                    }, 200)   
                     burgerMenu.classList.add('change-height')
                 }else {
+                    list.classList.remove('active');
+                    menu.style.height = btnHeight + 'px'; 
                     burgerMenu.classList.remove('change-height');  
                 }
           })
@@ -90,8 +94,8 @@ class Dropdown {
   })
 
 
-  Fancybox.bind(".card__img", {
+Fancybox.bind(".card__img", {
     Image: {
-      zoom: true,
+        zoom: true,
     },
-  });
+});
