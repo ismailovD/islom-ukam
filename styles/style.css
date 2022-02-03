@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
+    -webkit-tap-highlight-color:transparent;
 }
 
 a {
@@ -801,7 +802,7 @@ transition-delay: 0s;
     width: 65px;
     height: 65px;
     cursor: pointer; 
-    perspective: 100px;
+    perspective: 100px; 
 }
  
 .fixed__social-surface { 
@@ -959,6 +960,7 @@ transition-delay: 0s;
 }
  
 @media (max-width: 991px) {
+     
      .burger-menu__btn {
         display: flex;
     }
