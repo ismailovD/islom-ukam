@@ -10,24 +10,25 @@ const   burgerBtn = document.querySelector('.burger-menu__btn '),
         cards = document.querySelectorAll('.card');
 
 
-window.addEventListener('load', () => { 
-    resizeChange();
+window.addEventListener('load', () => {  
     setTimeout(() => {
         loading.classList.add('small');
     }, 1000)
     setTimeout(() => {
     loading.classList.add('hide'); 
     }, 1300)
+    resizeChange();
+    
 }) 
-
-
+ 
 window.addEventListener('resize', () => {
+    resizeChange();
     if(window.innerWidth > 991){
       burgerMenu.classList.remove('show');
       burgerBtn.classList.remove('change');
       body.classList.remove('hidden');
     } 
-    resizeChange();
+   
 })
 
  
