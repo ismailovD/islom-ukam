@@ -95,8 +95,12 @@ class Dropdown {
   })
 
 
-Fancybox.bind(".card__img", {
-    Image: {
-        zoom: true,
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    Thumbs: {
+      Carousel: {
+        fill: false,
+        center: true,
+      },
     },
-});
+  });
+ 
