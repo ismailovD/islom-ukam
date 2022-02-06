@@ -95,12 +95,12 @@ class Dropdown {
   })
 
 
-  Fancybox.bind('[data-fancybox="gallery"]', {
+Fancybox.bind('[data-fancybox="gallery"]', {
     Thumbs: {
-      Carousel: {
+    Carousel: {
         fill: false,
         center: true,
-      },
     },
-  });
+    },
+});
  

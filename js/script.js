@@ -23,12 +23,4 @@ const swiper2 = new Swiper(".mySwiper2", {
 });
  
 
-let qr = document.querySelector('#qr-code');
-
-qr.innerHTML = "";
  
-new QRCode(qr, {
-    text: "content",
-    width: 128,
-    height: 128
-})
