@@ -7,7 +7,8 @@ const   burgerBtn = document.querySelector('.burger-menu__btn '),
         sideBarSet = '.side-bar__settings', 
         dropdownList = document.querySelector('.side-bar__settings'), 
         dropdownBtn = document.querySelector('.side-bar__dropdown'),
-        cards = document.querySelectorAll('.card');
+        cards = document.querySelectorAll('.card'),
+        sideBarLink = document.querySelectorAll('.side-bar__link');
 
 
 window.addEventListener('load', () => {  
@@ -103,4 +104,12 @@ Fancybox.bind('[data-fancybox="gallery"]', {
     },
     },
 });
- 
+
+
+sideBarLink.forEach(link => {
+    console.log(link.getAttribute('href').split('./'));
+    console.log(location.pathname);
+    if(location.pathname.includes(link.getAttribute('href').split('./')[1])){
+        link.classList.add('visit')
+    }
+}) 
