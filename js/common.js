@@ -8,7 +8,7 @@ const   burgerBtn = document.querySelector('.burger-menu__btn '),
         dropdownList = document.querySelector('.side-bar__settings'), 
         dropdownBtn = document.querySelector('.side-bar__dropdown'),
         cards = document.querySelectorAll('.card'),
-        sideBarLink = document.querySelectorAll('.side-bar__link');
+        sideBarLink = document.querySelectorAll('.global-item');
 
 
 window.addEventListener('load', () => {  
@@ -70,7 +70,7 @@ class Dropdown {
         let btn = menu.querySelector('.side-bar__dropdown'), 
             btnHeight = btn.clientHeight; 
             menu.style.height = btnHeight + 'px'; 
-          btn.addEventListener('click', () => {  
+            btn.addEventListener('click', () => {  
             menu.classList.toggle('active'); 
               let list = menu.querySelector('.side-bar__dropdown-list'),
                   listHeight = list.clientHeight;   
@@ -106,9 +106,7 @@ Fancybox.bind('[data-fancybox="gallery"]', {
 });
 
 
-sideBarLink.forEach(link => {
-    console.log(link.getAttribute('href').split('./'));
-    console.log(location.pathname);
+sideBarLink.forEach(link => { 
     if(location.pathname.includes(link.getAttribute('href').split('./')[1])){
         link.classList.add('visit')
     }
