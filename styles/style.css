@@ -42,6 +42,8 @@ li {
     --f500-manrope: "Manrope-Medium";
     --f600-manrope: "Manrope-Semibold";
     --f700-manrope: "Manrope-Bold";
+    --f400-lato: "Lato-Regular"; 
+    --f700-lato: "Lato-Bold";
     --main-input-bg: #F2F1FF;
     --btn-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
     --bg-other-main: #F2F1FF;
@@ -478,7 +480,7 @@ transition-delay: 0s;
     margin-right: auto;
     text-align: center;
     color: var(--white);
-    font-family: var(--f700-manrope);     
+    font-family: var(--f700-lato);     
     font-weight: 700;
     font-size: 34px;
 }
@@ -490,12 +492,11 @@ transition-delay: 0s;
     margin-bottom: 30px;
     text-align: center;
     color: var(--white);
-    font-family: var(--f400-manrope);     
+    font-family: var(--f400-lato);     
     font-weight: 400;
     font-size: 28px;
     line-height: 35px;
-    letter-spacing: 0.1px;
-    background: var(--nav-link);
+    letter-spacing: 0.1px; 
 }
 .side-bar__settings {
     -webkit-box-pack: center;
@@ -1245,9 +1246,16 @@ transition-delay: 0s;
     .footer__contact {
         flex-flow: column wrap;
     }
-    .main__desc {
-        font-size: 18px;
-        line-height: 22px; 
+   
+    .main__title {
+        padding:30px 15px 5px;
     }
-    
+    .main__desc {
+        font-size: 16px;
+        line-height: 20px;   
+        text-align: left;
+    } 
+     .index__title {
+        padding-bottom: 30px;
+    }
 }

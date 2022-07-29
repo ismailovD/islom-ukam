@@ -1,5 +1,4 @@
-const swiper = new Swiper(".mySwiper", {
-    loop: true,
+const swiper = new Swiper(".mySwiper", { 
     spaceBetween: 10,
     slidesPerView: 1,  
     watchSlidesProgress: true,
@@ -7,8 +6,7 @@ const swiper = new Swiper(".mySwiper", {
     autoHeight: true
   });
  
-const swiper2 = new Swiper(".mySwiper2", {
-    loop: true,
+const swiper2 = new Swiper(".mySwiper2", { 
     slidesPerView: "auto", 
     spaceBetween: 10, 
     centeredSlides: true,
