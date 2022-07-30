@@ -3,7 +3,7 @@ const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,  
     watchSlidesProgress: true,
     allowTouchMove:false,
-    autoHeight: true
+    autoHeight: false
   });
  
 const swiper2 = new Swiper(".mySwiper2", { 
@@ -18,6 +18,7 @@ const swiper2 = new Swiper(".mySwiper2", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    autoHeight:false
 });
  
 

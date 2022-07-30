@@ -704,10 +704,10 @@ transition-delay: 0s;
 }
 
 .no__content {
-    font-family: var(--f700-manrope);
+    font-family: var(--f700-lato);
     font-weight: 700;
     font-size: 45px;
-    color: var(--blue);
+    color: var(--green);
     text-align: center;
     padding:0 0 50px ;
 }
@@ -988,7 +988,7 @@ transition-delay: 0s;
     filter: drop-shadow(0 0 20px #fff);
 }
 .about {
-    background: url(../images/IMG_3170.jpg) no-repeat top/ cover;
+    background: url(../images/IMG_3170.webp) no-repeat top/ cover;
     padding: 100px 0;
 }
 .about .row>* {
@@ -1126,6 +1126,7 @@ transition-delay: 0s;
     font-size: 20px;
 }
 
+ 
 
 @keyframes rotation {
     from { 
