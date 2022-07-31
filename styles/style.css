@@ -881,6 +881,9 @@ transition-delay: 0s;
     transform: translateX(-50%);
     opacity: 0; 
     padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .fixed__social-link[title="Tik Tok"]::after { 
     content: '';
