@@ -1112,7 +1112,8 @@ transition-delay: 0s;
     margin-bottom: 20px;
 }
 
-.footer__contact-text {
+.footer__contact-text,
+.footer__contact-text> a {
     flex: 1 1 50%;
     color: var(--white);
     font-family: var(--f700-manrope);
@@ -1261,5 +1262,9 @@ transition-delay: 0s;
     } 
      .index__title {
         padding-bottom: 30px;
+    }
+    .no__content {
+        font-size: 22px;
+        line-height: 25px;
     }
 }
